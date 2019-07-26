@@ -67,39 +67,37 @@ a = aardvark, b = baboon, c = cat
 
 就像你看到的一样,它可以传递列表\(或者元组\)的每一项并把它们解包.注意必须与它们在函数里的参数相吻合.当然,你也可以在函数定义或者函数调用时用\*.
 
-**3.**[**装饰器**](http://lib.csdn.net/article/python/62942)\*\*\*\*
+3.[**装饰器**](http://lib.csdn.net/article/python/62942)
 
-4**.**[**Python中单下划线和双下划线**](http://www.zhihu.com/question/19754941)\*\*\*\*
+4.[**Python中单下划线和双下划线**](http://www.zhihu.com/question/19754941)
+5.[**Python代码的执行原理**](https://www.cnblogs.com/xiaolongxia/articles/4039135.html)
 
-[5**.Python代码的执行原理**](https://www.cnblogs.com/xiaolongxia/articles/4039135.html)\*\*\*\*
-
-\*\*\*\*[6.**Python中int是如何实现的**](http://python.jobbole.com/82632/)\*\*\*\*
+6.[**Python中int是如何实现的**](http://python.jobbole.com/82632/)
 
 7.**Python中的gil**
 
 GIL 是python的全局解释器锁，同一进程中假如有多个线程运行，一个线程在运行python程序的时候会霸占python解释器（加了一把锁即GIL），使该进程内的其他线程无法运行，等该线程运行完后其他线程才能运行。如果线程运行过程中遇到耗时操作，则解释器锁解开，使其他线程运行。所以在多线程中，线程的运行仍是有先后顺序的，并不是同时进行。多进程中因为每个进程都能被系统分配资源，相当于每个进程有了一个python解释器，所以多进程可以实现多个进程的同时运行，缺点是进程系统资源开销大。
 
-8.[**Python中的协程**](https://www.cnblogs.com/zingp/p/5911537.html)\*\*\*\*
+8.[**Python中的协程**](https://www.cnblogs.com/zingp/p/5911537.html)
+9.[**Python的IO多路复用**](https://www.cnblogs.com/wjx1/p/5114309.html)
 
-9.[**Python的IO多路复用**](https://www.cnblogs.com/wjx1/p/5114309.html)\*\*\*\*
+10.[**上下文管理器**](https://blog.csdn.net/weixin_38853600/article/details/82887907)
 
-10.[**上下文管理器**](https://blog.csdn.net/weixin_38853600/article/details/82887907)\*\*\*\*
+11.[**运算符重载**](https://blog.csdn.net/zss041962/article/details/78917359)
 
-11.[**运算符重载**](https://blog.csdn.net/zss041962/article/details/78917359)\*\*\*\*
+12.闭包
 
-**12.闭包**
+13.[**元类**](http://python.jobbole.com/88795/)
 
-**13.**[**元类**](http://python.jobbole.com/88795/)\*\*\*\*
+14.[**单例模式**](https://www.cnblogs.com/huchong/p/8244279.html)
 
-**14.**[**单例模式**](https://www.cnblogs.com/huchong/p/8244279.html)\*\*\*\*
+15.[**多重继承**](https://www.liaoxuefeng.com/wiki/0014316089557264a6b348958f449949df42a6d3a2e542c000/001431865288798deef438d865e4c2985acff7e9fad15e3000)
 
-**15.**[**多重继承**](https://www.liaoxuefeng.com/wiki/0014316089557264a6b348958f449949df42a6d3a2e542c000/001431865288798deef438d865e4c2985acff7e9fad15e3000)
+16.[**浅拷贝和深拷贝**]
 
-**16.**[**浅拷贝和深拷贝**]
+17.[**垃圾回收机制**]
 
-**17.**[**垃圾回收机制**]
+18.[**保护类中元素的装饰器@property**](https://www.liaoxuefeng.com/wiki/897692888725344/923030547069856)
 
-\*\*\*\*[**18.类中元素@property**](https://www.liaoxuefeng.com/wiki/897692888725344/923030547069856) ****
-
-**19.**[**\_\_slots\_\_**](https://www.liaoxuefeng.com/wiki/897692888725344/923030542875328)\*\*\*\*
+19.[**\_\_slots\_\_**](https://www.liaoxuefeng.com/wiki/897692888725344/923030542875328)
 
