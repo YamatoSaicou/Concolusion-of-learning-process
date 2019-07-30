@@ -61,3 +61,26 @@ def main():
 if __name__ == '__main__':
     main()
 ```
+6. 字符串格式化:%和.format 他们的区别在于？
+
+   format在许多方面看起来更便利.对于`%`最烦人的是它无法同时传递一个变量和元组.你可能会想下面的代码不会有什么问题:
+
+```python
+"hi there %s" % name
+```
+
+   但是,如果name恰好是\(1,2,3\),它将会抛出一个TypeError异常.为了保证它总是正确的,你必须这样做:
+
+```python
+"hi there %s" % (name,)   # 提供一个单元素的数组而不是一个参数
+```
+
+   但是有点丑..format就没有这些问题.
+```python 
+print("{} {}".format("hello", "world"))   # 不设置指定位置，按默认顺序 'hello world'
+
+print("{0} {1}".format("hello", "world")) # 设置指定位置 'hello world'
+'hello world'
+ 
+print("{1} {0} {1}".format("hello", "world"))  # 设置指定位置 'world hello world'
+```
