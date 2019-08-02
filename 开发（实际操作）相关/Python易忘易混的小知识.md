@@ -81,3 +81,10 @@ def f(x):
 f = lambda x: x * x
 print(f(5))    #25
 ```
+### 5. 用集合set来获取非重复元素的数量
+
+```python
+    s = input()
+    st = set(s)
+    print(len(s))    #
+```
