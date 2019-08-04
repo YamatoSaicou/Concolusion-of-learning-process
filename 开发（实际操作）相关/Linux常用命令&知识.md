@@ -5,8 +5,35 @@ sudo apt-get upgrade 更新已安装的包 <br>
 ps aux 获取进程信息，配合kill来关闭卡死的进程 <br>
 lsof -i:端口号 查看端口占用 <br>
 cat 显示文件内容
-
+sh或者./ 执行sh脚本
 ## 搜索命令grep
+
+1、在当前目录中，查找后缀有 file 字样的文件中包含 test 字符串的文件，并打印出该字符串的行。此时，可以使用如下命令：
+```
+grep test *file 
+```
+结果如下所示：
+```
+$ grep test test* #查找前缀有“test”的文件包含“test”字符串的文件  
+testfile1:This a Linux testfile! #列出testfile1 文件中包含test字符的行  
+testfile_2:This is a linux testfile! #列出testfile_2 文件中包含test字符的行  
+testfile_2:Linux test #列出testfile_2 文件中包含test字符的行 
+```
+2、以递归的方式查找符合条件的文件。例如，查找指定目录/etc/acpi 及其子目录（如果存在子目录的话）下所有文件中包含字符串"update"的文件，并打印出该字符串所在行的内容，使用的命令为：
+```
+grep -r update /etc/acpi 
+```
+输出结果如下：
+```
+$ grep -r update /etc/acpi #以递归的方式查找“etc/acpi”  
+#下包含“update”的文件  
+/etc/acpi/ac.d/85-anacron.sh:# (Things like the slocate updatedb cause a lot of IO.)  
+Rather than  
+/etc/acpi/resume.d/85-anacron.sh:# (Things like the slocate updatedb cause a lot of  
+IO.) Rather than  
+/etc/acpi/events/thinkpad-cmos:action=/usr/sbin/thinkpad-keys--update 
+```
+
 
 ## 输出命令echo
 
