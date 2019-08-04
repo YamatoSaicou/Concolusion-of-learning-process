@@ -8,8 +8,7 @@ cat 显示文件内容
 ## 搜索命令grep
 
 ## 0 1 2
-
-[image]
+![image](https://github.com/YamatoSaicou/Kancolle-wallpaer/blob/master/gif/012.png)
 在Linux系统中0 1 2是一个文件描述符,我们平时使用的
 ```
 echo "hello" > t.log 
