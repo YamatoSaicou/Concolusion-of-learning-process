@@ -26,9 +26,9 @@ Description: 会在此记录一些值得经常回头复习的问题，刚学到�
 ### [Python编程”常识“](https://github.com/YamatoSaicou/Concolusion-of-learning-process/blob/master/%E5%BC%80%E5%8F%91%EF%BC%88%E5%AE%9E%E9%99%85%E6%93%8D%E4%BD%9C%EF%BC%89%E7%9B%B8%E5%85%B3/Python%E7%BC%96%E7%A8%8B%E2%80%9D%E5%B8%B8%E8%AF%86%E2%80%9C.md)
 ### [python爬虫-商品价格变化](https://github.com/YamatoSaicou/Concolusion-of-learning-process/blob/master/%E5%BC%80%E5%8F%91%EF%BC%88%E5%AE%9E%E9%99%85%E6%93%8D%E4%BD%9C%EF%BC%89%E7%9B%B8%E5%85%B3/python%E7%88%AC%E8%99%AB-%E5%95%86%E5%93%81%E4%BB%B7%E6%A0%BC%E5%8F%98%E5%8C%96)
 ### [使用Flask框架搭建博客的经验](https://github.com/YamatoSaicou/Concolusion-of-learning-process/blob/master/%E5%BC%80%E5%8F%91%EF%BC%88%E5%AE%9E%E9%99%85%E6%93%8D%E4%BD%9C%EF%BC%89%E7%9B%B8%E5%85%B3/%E4%BD%BF%E7%94%A8Flask%E6%A1%86%E6%9E%B6%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2%E7%9A%84%E7%BB%8F%E9%AA%8C.md)
-### [秒杀系统分析（无机会实践Orz）](https://github.com/YamatoSaicou/Concolusion-of-learning-process/blob/master/%E5%BC%80%E5%8F%91%EF%BC%88%E5%AE%9E%E9%99%85%E6%93%8D%E4%BD%9C%EF%BC%89%E7%9B%B8%E5%85%B3/%E7%A7%92%E6%9D%80%E7%B3%BB%E7%BB%9F%E5%88%86%E6%9E%90%EF%BC%88%E6%97%A0%E6%9C%BA%E4%BC%9A%E5%AE%9E%E8%B7%B5Orz%EF%BC%89.md)
-### [LINUX常用命令&知识）](https://github.com/YamatoSaicou/Concolusion-of-learning-process/blob/master/%E5%BC%80%E5%8F%91%EF%BC%88%E5%AE%9E%E9%99%85%E6%93%8D%E4%BD%9C%EF%BC%89%E7%9B%B8%E5%85%B3/Linux%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4&%E7%9F%A5%E8%AF%86.md)
-
+### [秒杀系统分析（出于兴趣，纸上谈兵一下）](https://github.com/YamatoSaicou/Concolusion-of-learning-process/blob/master/%E5%BC%80%E5%8F%91%EF%BC%88%E5%AE%9E%E9%99%85%E6%93%8D%E4%BD%9C%EF%BC%89%E7%9B%B8%E5%85%B3/%E7%A7%92%E6%9D%80%E7%B3%BB%E7%BB%9F%E5%88%86%E6%9E%90%EF%BC%88%E6%97%A0%E6%9C%BA%E4%BC%9A%E5%AE%9E%E8%B7%B5Orz%EF%BC%89.md)
+### [LINUX常用命令&知识](https://github.com/YamatoSaicou/Concolusion-of-learning-process/blob/master/%E5%BC%80%E5%8F%91%EF%BC%88%E5%AE%9E%E9%99%85%E6%93%8D%E4%BD%9C%EF%BC%89%E7%9B%B8%E5%85%B3/Linux%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4&%E7%9F%A5%E8%AF%86.md)
+### [Microsoft Azure TTS API使用](https://github.com/YamatoSaicou/Concolusion-of-learning-process/blob/master/%E5%BC%80%E5%8F%91%EF%BC%88%E5%AE%9E%E9%99%85%E6%93%8D%E4%BD%9C%EF%BC%89%E7%9B%B8%E5%85%B3/Microsoft%20Azure%20TTS%EF%BC%88%E6%96%87%E5%AD%97%E8%BD%AC%E8%AF%AD%E9%9F%B3%EF%BC%89%20API%E4%BD%BF%E7%94%A8.md)
 
 
 
