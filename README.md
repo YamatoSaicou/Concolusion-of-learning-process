@@ -15,10 +15,10 @@ Description: 会在此记录一些值得经常回头复习的问题，刚学到�
 ### [排序算法](https://github.com/YamatoSaicou/Concolusion-of-learning-process/blob/master/%E9%87%8D%E8%A6%81%E7%9F%A5%E8%AF%86%E5%9B%9E%E9%A1%BE%E5%92%8C%E8%AE%B0%E5%BD%95/%E6%8E%92%E5%BA%8F%E7%AE%97%E6%B3%95.md)
 ### [数据库](https://github.com/YamatoSaicou/Concolusion-of-learning-process/blob/master/%E9%87%8D%E8%A6%81%E7%9F%A5%E8%AF%86%E5%9B%9E%E9%A1%BE%E5%92%8C%E8%AE%B0%E5%BD%95/%E6%95%B0%E6%8D%AE%E5%BA%93.md)
 ### [时间复杂度和空间复杂度](https://github.com/YamatoSaicou/Concolusion-of-learning-process/blob/master/%E9%87%8D%E8%A6%81%E7%9F%A5%E8%AF%86%E5%9B%9E%E9%A1%BE%E5%92%8C%E8%AE%B0%E5%BD%95/%E6%97%B6%E9%97%B4%E5%A4%8D%E6%9D%82%E5%BA%A6%E5%92%8C%E7%A9%BA%E9%97%B4%E5%A4%8D%E6%9D%82%E5%BA%A6.md)
-### 有意思的算法
+### 有意思的算法和解题思路
 #### ["公平"洗牌](https://github.com/YamatoSaicou/Concolusion-of-learning-process/blob/master/%E9%87%8D%E8%A6%81%E7%9F%A5%E8%AF%86%E5%9B%9E%E9%A1%BE%E5%92%8C%E8%AE%B0%E5%BD%95/%E6%9C%89%E6%84%8F%E6%80%9D%E7%9A%84%E7%AE%97%E6%B3%95/%22%E5%85%AC%E5%B9%B3%22%E6%B4%97%E7%89%8C.md)
 #### [只出现一次的元素](https://github.com/YamatoSaicou/Concolusion-of-learning-process/blob/master/%E9%87%8D%E8%A6%81%E7%9F%A5%E8%AF%86%E5%9B%9E%E9%A1%BE%E5%92%8C%E8%AE%B0%E5%BD%95/%E6%9C%89%E6%84%8F%E6%80%9D%E7%9A%84%E7%AE%97%E6%B3%95/%E5%8F%AA%E5%87%BA%E7%8E%B0%E4%B8%80%E6%AC%A1%E7%9A%84%E5%85%83%E7%B4%A0.md)
-
+#### [顺时针打印矩阵](https://github.com/YamatoSaicou/Concolusion-of-learning-process/blob/master/%E9%87%8D%E8%A6%81%E7%9F%A5%E8%AF%86%E5%9B%9E%E9%A1%BE%E5%92%8C%E8%AE%B0%E5%BD%95/%E6%9C%89%E6%84%8F%E6%80%9D%E7%9A%84%E7%AE%97%E6%B3%95/%E9%A1%BA%E6%97%B6%E9%92%88%E6%89%93%E5%8D%B0%E7%9F%A9%E9%98%B5.md)
 
 ## 开发（实际操作）相关
 
