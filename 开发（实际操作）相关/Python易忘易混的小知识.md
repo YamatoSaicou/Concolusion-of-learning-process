@@ -181,3 +181,25 @@ print(list(map(int, sys.stdin.readline().strip())))
 
 第二行，strip()处理之后，返回了字符串"787585"，然后将每一个字符转化为int，并**构建列表**。
 
+### 8. floate类型保留对应的小数点
+1. '%.2f' %f 方法  四舍五入
+```python
+f = 1.23456
+print('%.4f' % f) # 1.2345
+print('%.3f' % f) # 1.234
+print('%.2f' % f) # 1.23
+```
+2. round函数 不推荐
+3. 自己写一个函数，实现舍弃小数点
+```python
+def get_two_float(f_str, n):
+    f_str = str(f_str)      # f_str = '{}'.format(f_str) 也可以转换为字符串
+    a, b, c = f_str.partition('.')
+    c = (c+"0"*n)[:n]       # 如论传入的函数有几位小数，在字符串后面都添加n为小数0
+    return ".".join([a, c])
+num = 123.4567
+print(get_two_float(num, 2))   #123.45
+num2 = 123.4
+print(get_two_float(num2, 2))  #123.40
+``` 
+   * Python partition() 方法: partition() 方法用来根据指定的分隔符将字符串进行分割。如果字符串包含指定的分隔符，则返回一个3元的元组，第一个为分隔符左边的子串，第二个为分隔符本身，第三个为分隔符右边的子串。
