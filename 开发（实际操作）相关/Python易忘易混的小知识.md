@@ -153,6 +153,14 @@ str.split(str="", num=string.count(str))
 
 通过指定分隔符对字符串进行切片，如果第二个参数 num 有指定值，则分割为 num+1 个子字符串，返回分割后的字符串列表。
 
+3) 列表中的数字组合成一个数字
+
+```python
+a = [1, 3, 5, 3, 2, 1]
+b = [str(x) for x in a]
+print(int(''.join(b)))  #输出结果135321
+```
+
 **一个例子**：
 ```
 6 5    #这是输入值
@@ -185,8 +193,8 @@ print(list(map(int, sys.stdin.readline().strip())))
 1. '%.2f' %f 方法  四舍五入
 ```python
 f = 1.23456
-print('%.4f' % f) # 1.2345
-print('%.3f' % f) # 1.234
+print('%.4f' % f) # 1.2346
+print('%.3f' % f) # 1.235
 print('%.2f' % f) # 1.23
 ```
 2. round函数 不推荐
