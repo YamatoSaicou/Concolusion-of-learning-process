@@ -67,7 +67,7 @@ a = aardvark, b = baboon, c = cat
 
 就像你看到的一样,它可以传递列表\(或者元组\)的每一项并把它们解包.注意必须与它们在函数里的参数相吻合.当然,你也可以在函数定义或者函数调用时用\*.
 
-3.[**装饰器**](http://lib.csdn.net/article/python/62942)
+3.[**装饰器**](https://www.liaoxuefeng.com/wiki/1016959663602400/1017451662295584)
 
 4.[**Python中单下划线和双下划线**](http://www.zhihu.com/question/19754941)
 5.[**Python代码的执行原理**](https://www.cnblogs.com/xiaolongxia/articles/4039135.html)
