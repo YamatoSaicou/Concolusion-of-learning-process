@@ -73,10 +73,102 @@ REST Web 服务常用的两种编码方式是 JavaScript 对象表示法（JavaS
 基于以上原因，Web 服务的容错能力要比一般的 Web 程序强，而且还要保证旧版客户端能继续使用。这一问题的常见解决办法是使用版本区分 Web 服务所处理的  URL。例如，首次发布的博客 Web 服务可以通过 /api/v1.0/posts/ 提供博客文章的集合。
 
 在 URL 中加入 Web 服务的版本有助于条理化管理新旧功能，让服务器能为新客户端提供新功能，同时继续支持旧版客户端。博客服务可能会修改博客文章使用的    JSON 格式，同时通过 /api/v1.1/posts/ 提供修改后的博客文章，而客户端仍能通过 /api/v1.0/posts/ 获取旧的JSON 格式。在一段时间内，服务器要同时    处理 v1.1 和 v1.0 这两个版本的 URL。
-### 使用flask提供REST web 服务
 
-1.
+### 使用Flask提供REST web 服务
 
+1. REST API 相关的路由是一个自成一体的程序子集，所以为了更好地组织代码，我们最好把这些路由放到独立的蓝本中，在这个 API 蓝本中，各资源分别在不同的模块中实现。蓝本中还包含处理认证、错误以及提供自定义修饰器的模块。(这些模块是.py文件，里面定义好了对应功能的路由)
+```python
+from flask import Blueprint 
+api = Blueprint('api', __name__) 
+from . import authentication, posts, users, comments, errors
+```
+```python
+def create_app(config_name): 
+    #.....
+    from .api_1_0 import api as api_1_0_blueprint 
+    app.register_blueprint(api_1_0_blueprint, url_prefix='/api/v1.0')
+```
+2. 错误处理：
+  * 为所有客户端生成适当响应的一种方法是，在错误处理程序中根据客户端请求的格式改写响应，这种技术称为内容协商。下面的例子是改进后的 404 错误处理程序，它向 Web 服务客户端发送 JSON 格式响应，除此之外都发送 HTML 格式响应。500 错误处理程序的写法类似。
+```python
+@main.app_errorhandler(404)
+def page_not_found(e): 
+    if request.accept_mimetypes.accept_json and \ 
+        not request.accept_mimetypes.accept_html: 
+      response = jsonify({'error': 'not found'}) 
+      response.status_code = 404 
+      return response 
+    return render_template('404.html'), 404
+```
+  * 这个新版错误处理程序检查 Accept 请求首部（Werkzeug 将其解码为 request.accept_ mimetypes），根据首部的值决定客户端期望接收的响应格式。浏览器一般不限制响应的格式，所以只为接受 JSON 格式而不接受 HTML 格式的客户端生成 JSON 格式响应。其他状态码都由 Web 服务生成，因此可在蓝本的errors.py 模块作为辅助函数实现。
+```python
+def unauthorized(message):
+    response = jsonify({'error': 'unauthorized', 'message': message})
+    response.status_code = 401
+    return response
+```
+3. 用户认证:
+  * 和普通的 Web 程序一样，Web 服务也需要保护信息，确保未经授权的用户无法访问。为此，RIA 必须询问用户的登录密令，并将其传给服务器进行验证。前面说过，REST Web 服务的特征之一是无状态，即服务器在两次请求之间不能“记住”客户端的任何信息。客户端必须在发出的请求中包含所有必要信息，因此所有请求都必须包含用户密令。程序当前的登录功能是在 Flask-Login 的帮助下实现的，可以把数据存储在用户会话中。默认情况下，Flask 把会话保存在客户端 cookie 中，因此服务器没有保存任何用户相关信息，都转交给客户端保存。这种实现方式看起来遵守了 REST 架构的无状态要求，但在 REST Web 服务中使用 cookie 有点不现实，因为 Web 浏览器之外的客户端很难提供对 cookie 的支持。鉴于此，使用 cookie 并不是一个很好的设计选择。
+  * REST 架构基于 HTTP 协议，所以发送密令的最佳方式是使用 HTTP 认证。
+  * 基于令牌的认证：使用基于令牌的认证方案时，客户端要先把登录密令发送给一个特殊的 URL，从而生成认证令牌。一旦客户端获得令牌，就可用令牌代替登录密令认证请求。出于安全考虑，令牌有过期时间。令牌过期后，客户端必须重新发送登录密令以生成新令牌。令牌落入他人之手所带来的安全隐患受限于令牌的短暂使用期限。
+4. 资源和JSON的序列化转换
+  * 开发 Web 程序时，经常需要在资源的内部表示和 JSON 之间进行转换。JSON 是 HTTP 请求和响应使用的传输格式。例子是新添加到 Post 类中的 to_json() 方法以及利用json数据创建post的方法。
+ ```python
+ class Post(db.Model): 
+     # ... 
+    def to_json(self): 
+       json_post = { 
+            'url': url_for('api.get_post', id=self.id, _external=True), 'body': self.body, 
+            'body_html': self.body_html, 
+            'timestamp': self.timestamp, 
+            'author': url_for('api.get_user', id=self.author_id, 
+                       _external=True), 
+            'comments': url_for('api.get_post_comments', id=self.id, 
+                          _external=True) 
+            'comment_count': self.comments.count() 
+            } 
+    return json_post
+    
+    @staticmethod 
+    def from_json(json_post):
+       body = json_post.get('body') 
+       if body is None or body == '': 
+          raise ValidationError('post does not have a body') #在实现过程中只选择使用 JSON 字典中的 body 属性，而把 body_html属性忽略了，因为只要 body 属性的值发生变化，就会触发一个 SQLAlchemy 事件，自动在服务器端渲染 Markdown。
+    return Post(body=body)
+```
+  * url、author 和 comments 字段要分别返回各自资源的 URL，因此它们使用 url_for() 生成，所调用的路由即将在 API 蓝本中定义。注意，所有 url_for() 方法都指定了参数 _ external=True，这么做是为了生成完整的 URL，而不是生成传统 Web 程序中经常使用的相对 URL。
+5. 实现GET方法,返回单篇博客文章，如果在数据库中没找到指定 id 对应的文章，则返回 404错误。
+```python
+@api.route('/posts/<int:id>')
+def get_post(id):
+    post = Post.query.get_or_404(id)    #最短路径效应
+    return jsonify(post.to_json())
+```
+6. 实现post方法，插入新资源。
+```python
+@api.route('/posts/', methods=['POST'])
+@permission_required(Permission.WRITE_ARTICLES)
+def new_post():
+    post = Post.from_json(request.json)
+    post.author = g.current_user
+    db.session.add(post)
+    db.session.commit()
+    return jsonify(post.to_json()), 201, \
+        {'Location': url_for('api.get_post', id=post.id, _external=True)}
+```
+7. 实现put方法，更新资源。
+```python
+@api.route('/posts/<int:id>', methods=['PUT'])
+@permission_required(Permission.WRITE_ARTICLES)
+def edit_post(id):
+    post = Post.query.get_or_404(id)
+    if g.current_user != post.author and \
+            not g.current_user.can(Permission.ADMINISTER):
+        return forbidden('Insufficient permissions')
+    post.body = request.json.get('body', post.body)
+    db.session.add(post)
+    return jsonify(post.to_json())
+```
 ### 程序结构
 
 1. 最简单的初始化方式与程序结构。
@@ -114,7 +206,7 @@ main = Blueprint('main', __name__)
 from . import views, errors
 `
      * 蓝本的名字和蓝本所在的包或模块。和程序一样，大多数情况下第二个参数使用 Python 的__name__ 变量即可。
-     * 程序的路由保存在包里的 app/main/views.py 模块中，而错误处理程序保存在 app/main/errors.py 模块中。导入这两个模块就能把路由和错误处理程序与蓝本关联起来。注意，这些模块在 app/main/__init__.py 脚本的末尾导入
+     * 程序的路由保存在包里的 app/main/views.py 模块中，而错误处理程序保存在 app/main/errors.py 模块中。导入这两个模块就能把路由和错误处理程序与蓝本关联起来。注意，这些模块在 app/main/__init__.py 脚本的末尾导入(这些模块是.py文件，里面存放了定义好的类和函数)
      * 蓝本在工厂函数 create_app() 中注册到程序上
  ```python
      # ... 
@@ -138,3 +230,4 @@ def page_not_found(e):
 def index(): 
 .....
 ``
+
