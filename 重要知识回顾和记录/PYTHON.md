@@ -104,6 +104,32 @@ GIL 是python的全局解释器锁，同一进程中假如有多个线程运行�
 
 12.闭包
 
+内部函数可以使用外部函数的临时变量。
+```python
+
+ #修改闭包变量的实例
+ #  outer是外部函数 a和b都是外函数的临时变量
+def outer( a ):
+     b = 10  # a和b都是闭包变量
+     c = [a] #这里对应修改闭包变量的方法2
+     # inner是内函数
+     def inner():
+         #内函数中想修改闭包变量
+         # 方法1 nonlocal关键字声明
+         nonlocal b
+         b = a + b
+         # 方法二，把闭包变量修改成可变数据类型 比如列表
+         c[0] += 1
+         print(c[0])
+         print(b) # 函数的返回值是内函数的引用
+     return inner
+
+if __name__ == '__main__':
+
+     demo = outer(5)
+     demo()
+```
+
 13.[**元类**](http://python.jobbole.com/88795/)
 
 14.[**单例模式**](https://www.cnblogs.com/huchong/p/8244279.html)
@@ -173,4 +199,12 @@ print("list1_5' =", list1_5)    #list1_5' = [0, 1, 2, ['a', 'b']]
 18.[**保护类中元素的装饰器@property**](https://www.liaoxuefeng.com/wiki/897692888725344/923030547069856)
 
 19.[**\_\_slots\_\_**](https://www.liaoxuefeng.com/wiki/897692888725344/923030542875328)
+
+正常情况下，当我们定义了一个class，创建了一个class的实例后，我们可以给该实例绑定任何属性和方法，这就是动态语言的灵活性。
+
+使用slots可以限制允许绑定的方法和实例。
+```python
+    class Student(object):
+        __slots__ = ('name', 'age') # 用tuple定义允许绑定的属性名称
+```
 
