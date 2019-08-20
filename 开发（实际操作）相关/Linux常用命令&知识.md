@@ -6,6 +6,7 @@ ps aux 获取进程信息，配合kill来关闭卡死的进程 <br>
 lsof -i:端口号 查看端口占用 <br>
 cat 显示文件内容
 sh或者./ 执行sh脚本
+tcpdump 抓包,例子(https://www.cnblogs.com/chyingp/p/linux-command-tcpdump.html)
 ## 搜索命令grep
 
 1、在当前目录中，查找后缀有 file 字样的文件中包含 test 字符串的文件，并打印出该字符串的行。此时，可以使用如下命令：
