@@ -33,19 +33,21 @@ Description: 会在此记录一些值得经常回头复习的问题，刚学到�
 ### [递归](https://github.com/YamatoSaicou/Concolusion-of-learning-process/blob/master/重要知识回顾和记录/递归.md)
 ### [回溯](https://github.com/YamatoSaicou/Concolusion-of-learning-process/blob/master/%E9%87%8D%E8%A6%81%E7%9F%A5%E8%AF%86%E5%9B%9E%E9%A1%BE%E5%92%8C%E8%AE%B0%E5%BD%95/%E5%9B%9E%E6%BA%AF%E6%B3%95.md)
 ### [分治算法](https://github.com/YamatoSaicou/Concolusion-of-learning-process/blob/master/%E9%87%8D%E8%A6%81%E7%9F%A5%E8%AF%86%E5%9B%9E%E9%A1%BE%E5%92%8C%E8%AE%B0%E5%BD%95/%E5%88%86%E6%B2%BB%E7%AE%97%E6%B3%95.md)
-### 有意思的算法
-#### ["公平"洗牌](https://github.com/YamatoSaicou/Concolusion-of-learning-process/blob/master/%E9%87%8D%E8%A6%81%E7%9F%A5%E8%AF%86%E5%9B%9E%E9%A1%BE%E5%92%8C%E8%AE%B0%E5%BD%95/%E6%9C%89%E6%84%8F%E6%80%9D%E7%9A%84%E7%AE%97%E6%B3%95/%22%E5%85%AC%E5%B9%B3%22%E6%B4%97%E7%89%8C.md)
-#### [只出现一次的元素](https://github.com/YamatoSaicou/Concolusion-of-learning-process/blob/master/%E9%87%8D%E8%A6%81%E7%9F%A5%E8%AF%86%E5%9B%9E%E9%A1%BE%E5%92%8C%E8%AE%B0%E5%BD%95/%E6%9C%89%E6%84%8F%E6%80%9D%E7%9A%84%E7%AE%97%E6%B3%95/%E5%8F%AA%E5%87%BA%E7%8E%B0%E4%B8%80%E6%AC%A1%E7%9A%84%E5%85%83%E7%B4%A0.md)
-#### [顺时针打印矩阵](https://github.com/YamatoSaicou/Concolusion-of-learning-process/blob/master/%E9%87%8D%E8%A6%81%E7%9F%A5%E8%AF%86%E5%9B%9E%E9%A1%BE%E5%92%8C%E8%AE%B0%E5%BD%95/%E6%9C%89%E6%84%8F%E6%80%9D%E7%9A%84%E7%AE%97%E6%B3%95/%E9%A1%BA%E6%97%B6%E9%92%88%E6%89%93%E5%8D%B0%E7%9F%A9%E9%98%B5.md)
+## 有意思的算法
+### ["公平"洗牌](https://github.com/YamatoSaicou/Concolusion-of-learning-process/blob/master/%E9%87%8D%E8%A6%81%E7%9F%A5%E8%AF%86%E5%9B%9E%E9%A1%BE%E5%92%8C%E8%AE%B0%E5%BD%95/%E6%9C%89%E6%84%8F%E6%80%9D%E7%9A%84%E7%AE%97%E6%B3%95/%22%E5%85%AC%E5%B9%B3%22%E6%B4%97%E7%89%8C.md)
+### [只出现一次的元素](https://github.com/YamatoSaicou/Concolusion-of-learning-process/blob/master/%E9%87%8D%E8%A6%81%E7%9F%A5%E8%AF%86%E5%9B%9E%E9%A1%BE%E5%92%8C%E8%AE%B0%E5%BD%95/%E6%9C%89%E6%84%8F%E6%80%9D%E7%9A%84%E7%AE%97%E6%B3%95/%E5%8F%AA%E5%87%BA%E7%8E%B0%E4%B8%80%E6%AC%A1%E7%9A%84%E5%85%83%E7%B4%A0.md)
+### [顺时针打印矩阵](https://github.com/YamatoSaicou/Concolusion-of-learning-process/blob/master/%E9%87%8D%E8%A6%81%E7%9F%A5%E8%AF%86%E5%9B%9E%E9%A1%BE%E5%92%8C%E8%AE%B0%E5%BD%95/%E6%9C%89%E6%84%8F%E6%80%9D%E7%9A%84%E7%AE%97%E6%B3%95/%E9%A1%BA%E6%97%B6%E9%92%88%E6%89%93%E5%8D%B0%E7%9F%A9%E9%98%B5.md)
 
-## 开发（实际操作）相关
-
+# 开发（实际操作）相关
+## PYTHON开发
 ### [Python易忘易混的小知识](https://github.com/YamatoSaicou/Concolusion-of-learning-process/blob/master/%E5%BC%80%E5%8F%91%EF%BC%88%E5%AE%9E%E9%99%85%E6%93%8D%E4%BD%9C%EF%BC%89%E7%9B%B8%E5%85%B3/Python%E6%98%93%E5%BF%98%E6%98%93%E6%B7%B7%E7%9A%84%E5%B0%8F%E7%9F%A5%E8%AF%86.md)
 ### [Python编程”常识“](https://github.com/YamatoSaicou/Concolusion-of-learning-process/blob/master/%E5%BC%80%E5%8F%91%EF%BC%88%E5%AE%9E%E9%99%85%E6%93%8D%E4%BD%9C%EF%BC%89%E7%9B%B8%E5%85%B3/Python%E7%BC%96%E7%A8%8B%E2%80%9D%E5%B8%B8%E8%AF%86%E2%80%9C.md)
 ### [python爬虫-商品价格变化](https://github.com/YamatoSaicou/Concolusion-of-learning-process/blob/master/%E5%BC%80%E5%8F%91%EF%BC%88%E5%AE%9E%E9%99%85%E6%93%8D%E4%BD%9C%EF%BC%89%E7%9B%B8%E5%85%B3/python%E7%88%AC%E8%99%AB-%E5%95%86%E5%93%81%E4%BB%B7%E6%A0%BC%E5%8F%98%E5%8C%96)
 ### [使用Flask框架搭建博客的经验](https://github.com/YamatoSaicou/Concolusion-of-learning-process/blob/master/%E5%BC%80%E5%8F%91%EF%BC%88%E5%AE%9E%E9%99%85%E6%93%8D%E4%BD%9C%EF%BC%89%E7%9B%B8%E5%85%B3/%E4%BD%BF%E7%94%A8Flask%E6%A1%86%E6%9E%B6%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2%E7%9A%84%E7%BB%8F%E9%AA%8C.md)
 ### [秒杀系统分析（出于兴趣，纸上谈兵一下）](https://github.com/YamatoSaicou/Concolusion-of-learning-process/blob/master/%E5%BC%80%E5%8F%91%EF%BC%88%E5%AE%9E%E9%99%85%E6%93%8D%E4%BD%9C%EF%BC%89%E7%9B%B8%E5%85%B3/%E7%A7%92%E6%9D%80%E7%B3%BB%E7%BB%9F%E5%88%86%E6%9E%90%EF%BC%88%E6%97%A0%E6%9C%BA%E4%BC%9A%E5%AE%9E%E8%B7%B5Orz%EF%BC%89.md)
+## LINUX
 ### [LINUX常用命令&知识](https://github.com/YamatoSaicou/Concolusion-of-learning-process/blob/master/%E5%BC%80%E5%8F%91%EF%BC%88%E5%AE%9E%E9%99%85%E6%93%8D%E4%BD%9C%EF%BC%89%E7%9B%B8%E5%85%B3/Linux%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4&%E7%9F%A5%E8%AF%86.md)
+## 其它
 ### [Microsoft Azure TTS API使用](https://github.com/YamatoSaicou/Concolusion-of-learning-process/blob/master/%E5%BC%80%E5%8F%91%EF%BC%88%E5%AE%9E%E9%99%85%E6%93%8D%E4%BD%9C%EF%BC%89%E7%9B%B8%E5%85%B3/Microsoft%20Azure%20TTS%EF%BC%88%E6%96%87%E5%AD%97%E8%BD%AC%E8%AF%AD%E9%9F%B3%EF%BC%89%20API%E4%BD%BF%E7%94%A8.md)
 
 
