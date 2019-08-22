@@ -31,6 +31,7 @@ Description: 会在此记录一些值得经常回头复习的问题，刚学到�
 ### [贪婪算法](https://github.com/YamatoSaicou/Concolusion-of-learning-process/blob/master/%E9%87%8D%E8%A6%81%E7%9F%A5%E8%AF%86%E5%9B%9E%E9%A1%BE%E5%92%8C%E8%AE%B0%E5%BD%95/%E8%B4%AA%E5%A9%AA%E7%AE%97%E6%B3%95.md)
 ### [退火算法](https://github.com/YamatoSaicou/Concolusion-of-learning-process/blob/master/重要知识回顾和记录/退火算法.md)
 ### [递归](https://github.com/YamatoSaicou/Concolusion-of-learning-process/blob/master/重要知识回顾和记录/递归.md)
+### [动态规划](https://github.com/YamatoSaicou/Concolusion-of-learning-process/blob/master/%E9%87%8D%E8%A6%81%E7%9F%A5%E8%AF%86%E5%9B%9E%E9%A1%BE%E5%92%8C%E8%AE%B0%E5%BD%95/%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92.md)
 ### [回溯](https://github.com/YamatoSaicou/Concolusion-of-learning-process/blob/master/%E9%87%8D%E8%A6%81%E7%9F%A5%E8%AF%86%E5%9B%9E%E9%A1%BE%E5%92%8C%E8%AE%B0%E5%BD%95/%E5%9B%9E%E6%BA%AF%E6%B3%95.md)
 ### [分治算法](https://github.com/YamatoSaicou/Concolusion-of-learning-process/blob/master/%E9%87%8D%E8%A6%81%E7%9F%A5%E8%AF%86%E5%9B%9E%E9%A1%BE%E5%92%8C%E8%AE%B0%E5%BD%95/%E5%88%86%E6%B2%BB%E7%AE%97%E6%B3%95.md)
 ## 有意思的算法
