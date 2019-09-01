@@ -50,6 +50,5 @@ Description: 会在此记录一些值得经常回头复习的问题，刚学到�
 ### [LINUX常用命令&知识](https://github.com/YamatoSaicou/Concolusion-of-learning-process/blob/master/%E5%BC%80%E5%8F%91%EF%BC%88%E5%AE%9E%E9%99%85%E6%93%8D%E4%BD%9C%EF%BC%89%E7%9B%B8%E5%85%B3/Linux%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4&%E7%9F%A5%E8%AF%86.md)
 ## 其它
 ### [Microsoft Azure TTS API使用](https://github.com/YamatoSaicou/Concolusion-of-learning-process/blob/master/%E5%BC%80%E5%8F%91%EF%BC%88%E5%AE%9E%E9%99%85%E6%93%8D%E4%BD%9C%EF%BC%89%E7%9B%B8%E5%85%B3/Microsoft%20Azure%20TTS%EF%BC%88%E6%96%87%E5%AD%97%E8%BD%AC%E8%AF%AD%E9%9F%B3%EF%BC%89%20API%E4%BD%BF%E7%94%A8.md)
-
-
+## 面经
 
