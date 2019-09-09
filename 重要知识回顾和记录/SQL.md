@@ -103,3 +103,4 @@ ADD vend_phone CHAR(20);
 ```SQL
 DROP TABLE CustCopy;  #不可撤销，谨慎操作
 ```
+20. 视图
