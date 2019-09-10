@@ -96,7 +96,7 @@ CREATE TABLE Products
 ```
 18. 更新表：
 ```SQL
-ALTER TABLE Vendors 
+ALTER TABLE Vendors   #ALTER是对表列进行操作，更行行值的时候使用UPDATE
 ADD vend_phone CHAR(20); 
 ```
 ```SQL 
@@ -212,3 +212,32 @@ ADD CONSTRAINT CHECK (gender LIKE '[MF]')  #性别只能是M或者F
 CREATE INDEX prod_name_ind ON Products (prod_name); 
 ```
 26. 触发器
+  * 触发器是特殊的存储过程，在特定的数据库活动发生时自动执行。
+  * 触发器与单个表关联，INSERT，DELETE，UPDATE执行时触发。
+  * 触发器的代码具有以下数据的使用权：
+     * INSERT操作中的所有新数据
+     * UPDATA中所有的新数据和旧数据
+     * DELETE操作中删除的数据
+  * 触发器可以在特定操作之前或之后执行
+  * 触发器的常见作用:
+     * 保持数据一致，例如人名大写等
+     * 基于某个表的活动，在其他表上进行操作。例如记录更改
+     * 进行额外的验证
+     * 计算列值或者更新时间戳
+```SQL
+CREATE TRIGGER customer_state  #SQL server
+ON Customers 
+FOR INSERT, UPDATE 
+AS 
+UPDATE Customers 
+SET cust_state = Upper(cust_state) 
+WHERE Customers.cust_id = inserted.cust_id; 
+```
+```SQL
+CREATE TRIGGER tr_testb_insert AFTER INSERT ON testb FOR EACH ROW   #MYSQL
+BEGIN
+	INSERT INTO testb_log (TESTB_ID,`NAME`, AGE,`STATUS`,`ACTION`,TIME)
+VALUES
+	(NEW.ID, NEW.NAME, NEW.AGE, NEW.STATUS,'INSERT',NOW());
+END;
+```
