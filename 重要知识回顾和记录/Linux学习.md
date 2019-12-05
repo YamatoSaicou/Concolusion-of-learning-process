@@ -43,6 +43,7 @@
   * processor: 当前cpu号
   * model name: 型号
   * cpu MHz： 主频
+  * mpstat -P ALl 1 查看每个核的利用率
 2. 进程cpu利用率查询：
   * top 查看cpu使用率高的排行
   * ps aux 查看所有进程
