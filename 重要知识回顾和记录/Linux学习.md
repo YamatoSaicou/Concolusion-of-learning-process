@@ -68,3 +68,7 @@
 2. 线程库：LinuxThreads与NPTL
 3. -lpthread 编译时用来连接库，要手动添加
 4. 注意线程栈大小，4KB
+## 内存
+1. 内存硬件信息查询: cat /proc/meminfo | more
+2. 内存使用率: free -m  看avialiable
+3. 32位系统 用户3G 系统1G  64位系统，全部是128T
