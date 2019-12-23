@@ -1,13 +1,21 @@
 ## 备忘录
 1. group by 与 order by
+   * group by 中一定会含有聚合函数
 2. having 与 where
+   * HAVING短语与WHERE子句的区别：作用对象不同。
+    * WHERE子句作用于基表或视图，从中选择满足条件的元组。
+    * HAVING短语作用于组，从中选择满足条件的组。
 3. distinct 只能用于表名
 4. 子查询 (经常可以被内联结代替)
 5. 计算字段
 6. 内联结:
   * 使用where连接两个表（简单语法）
   * inner join  on
-7. 笛卡尔积(叉联结)
+7. 左连接和右连接
+  * SELECT * from A LEFT JOIN B ON A.id= B.id and A.`name` = B.`name`  会查询出什么结果？ 会查询出 A 表中所有的数据消息和满足 B 表中的 数据消息
+  * 在使用left jion时，on和where条件的区别如下：
+    * on条件是在生成临时表时使用的条件，它不管on中的条件是否为真，都会返回左边表中的记录。
+    * where条件是在临时表生成好后，再对临时表进行过滤的条件。这时已经没有left join的含义（必须返回左边表的记录）了，条件不为真的就全部过滤掉。
 8. 自联结(from自己两次，起不同的别名)
 9. 外联结(LEFT OUTER JOIN )(RIGHT OUTER JOIN)
 10. UNION 连接两个selcet语句，并把输出组合成一个结果集。
